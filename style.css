@@ -1,0 +1,976 @@
+/* Import Font Family */
+  @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+pro=Pacifico&display=swap');
+
+/* Styling 1 Navigation */
+
+
+/* Universal Selector Fixed Configurattion*/
+*{
+    margin: 0px;
+    padding: 0px;
+    /* Not done in the original website */
+    /* box-sizing: border-box; */
+    /* Scrolling to anywhere will become smooth */
+    scroll-behavior: smooth;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+/* Color Defined */
+:root{
+    --bgOrange:#e84949;
+}
+/* Wrapper  Fixed Configuration*/
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Container Class */
+/* Configuration will be Given */
+.container{
+    /* now harcode 1200px for responsive we can use media queries */
+    width: 1200px;
+    /* Will set to center Same margin from both side left & right*/
+    margin: 0 auto;
+}
+
+/* NavBar Configuration  */
+.navbar{
+    /* All navbar items will come in straight */
+    display: flex;
+    /* Logo & Text should be in extreme ends  */
+    justify-content: space-between;
+    /* Vertically center */
+    align-items: center;
+
+    /* Designer will provide these entries */
+    padding-top: 1rem;
+}
+
+/* Logo &text should be in same line */
+/* Set display flex for logo-container as well */
+.logo-container{
+    display: flex;
+    /* J image size is very high so reduce it in logo*/
+
+    /* Baseline is not same */
+
+    justify-content: baseline;
+    align-items: center;
+}
+/* Reducing size of J */
+.logo{
+    width: 80px;    
+}
+
+/* Nav Items in straight line */
+.nav-items{
+    display: flex;
+    /* Gap between nav items */
+    gap: 2rem;
+
+    /* Designer inputs */
+    padding: 0 4rem;
+}
+
+/* logo text configuration */
+/* For exact same */
+.logo-text{
+    margin-left: -1.2rem;
+    font-size: 28px;
+}
+
+/* /nav items configuration */
+.nav-items{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+/* Change color of a tags */
+.nav-items div a{
+    color: black;
+}
+
+/* nav items get bold onn hover */
+.nav-items div:hover{
+    font-weight: bold;
+    transition: 0.s;
+}
+
+/* Remove underline from a tag */
+/* Set text-decoration:none; */
+a{
+    text-decoration: none;
+}
+
+
+/* STYLING OF 1 NAVIGATION SECTION COMPLETED */
+
+/* STYLING OF 2 HERO SECTION STARTS HERE */
+/* Left Side */
+
+/* Setting flex  */
+.hero-section{
+    /* Further we have to set a lots of positions for overlapping so set here position:relative */
+    position: relative;
+    display: flex;
+    /* Given it wll cover that much area to look good */
+    width: 1200px;
+    
+
+    justify-content: center;
+    align-items: center;
+
+    /* Designers inputs */
+    /* width: 100vh; */
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+/*  Fade text John Doe Configuration*/
+.faded-text{
+    /* User cannot select it so set  user-select: none; */
+    user-select: none;
+    position: absolute;
+    
+
+    /* Designer inputs */
+    font-size: 7em;
+    color: rgb(231,231,231);
+    bottom: -16%;
+    left: -5%;
+    font-weight: bold;
+    /* From our side */
+    transition: all 3s;
+}
+
+/* Setting hero-section-left flex and its direction column */
+.hero-section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+} 
+
+/* Hero section heading configuration */
+.hero-section-heading{
+    /* Designer Inputs */
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+/* Changes in running text */
+/* Span was used for such changes in running text */
+.role{
+    /* Designer Inputs */
+    color: #4e45d5;
+    font-weight: 800;
+}
+
+/* Changes in subheading */
+.hero-section-sub-heading{
+    /* Designer Inputs */
+    font-size: 45px;
+    line-height: 45px;
+}
+
+/* Changes is Description */
+.hero-section-description{
+    /* Designer Inputs */
+    margin: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+/* Button */
+/* Button Code Copy Paste */
+
+/* Button Styling Configuration wiil be given in figma file(input) */
+
+.btn-pink{
+    /* Content sixe button width */
+    width: fit-content;
+    background-color: #e84949;
+    padding:0.8rem 2.3rem;
+    /* Text color */
+    color: white;
+    font-size: 18px;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    position:relative;
+    z-index: 1;
+     /* cursor will be converted to pointer */
+     cursor: pointer;
+     /* On the spot */
+     transition-delay: 0;
+ }
+
+ /* Now use Pseudo  selector  */
+ /* eg before and after */
+ /* Before content will be before actual content */
+/* .btn-pink:before{
+    content: "ABCD ";
+} */
+
+
+ /* After content will be after actual content */
+ /* .btn-pink:after{
+    content: " ABCD";
+} */
+
+/* Color transition */
+ .btn-pink:before{
+    content: "";
+    background-color: #1f1f1f;
+    /* Set nearest position ancestor must be relative so ancestor is btn-pink so btn-pink position:relative*/
+    position:absolute;
+    /* For filling in full div give all direction 0 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* set  scale 0 for starting*/
+    transform: scaleX(0);
+    /* Scale it from left side */
+    transform-origin: left;
+    transition:all 0.8s;
+    /* now set z index */
+    z-index: -1;
+    
+
+}
+
+/* At hover the transition will be visible by setting from scale 0 to 1*/
+.btn-pink:hover::before{
+    transform: scaleX(1);
+    /* cursor will be converted to pointer */
+    cursor: pointer;
+    /* On the spot */
+    transition-delay: 0;
+}
+
+/* Right Side */
+.hero-section-right {
+    /* Position relative for overlapping */
+    position:relative;
+}
+.absolute{
+    position:absolute;
+}
+
+/* user Image Styling */
+.user-image{
+    /* Designers inputs */
+    padding: 2.5rem;
+    /* Black&White */
+    filter: grayscale(1);
+    /* Scaling */
+    transition: all 1s;
+    animation: scaleImage 5s linear infinite;
+}
+/* Adding keyframes */
+@keyframes scaleImage {
+    /* Designer Input */
+    0%{
+        filter: grayscale(0);
+        transform: scale(1);
+    }
+    50%{
+        filter: grayscale(1);
+        transform: scale(1.1);
+    }
+    100%{
+        box-shadow: 3px 3px 10px black;
+        filter: grayscale(0);
+        transform: scale(1);
+    }
+    
+}
+
+
+/* Z index*/
+.user-image img{
+    z-index: -9;
+}
+
+/* Icon Dot Configuration */
+.icon-dots{
+    /* Dot will come up */
+    z-index: 9;
+    /* Position of dot */
+    bottom: -1rem;
+    right: 0;
+    animation-name:dotsAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes dotsAnimation {
+    0%{
+        /* Movement through translate */
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+
+/* Icon Cube Configuration */
+.icon-cube{
+    /* cube will come up */
+    z-index: 9;
+    /* IMP Perspective is needed only in scale and translate not for rotate*/
+    /* Position of cube */
+    top: -0.8em;
+    right: 1em;
+    animation-name:cubeRotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes cubeRotate {
+    0%{
+        /* Movement through translate And and ratation through rotate */
+        transform: rotateY(0deg) translateY(0px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(-12px);
+    }
+    100%{
+        transform: rotateY(360) translateY(0px);
+    }
+    
+}
+
+
+/* Icon Circle Configuration */
+.icon-circle{
+    /* Circle will come up */
+    z-index: 9;
+    /* IMP Perspective is needed only in scale and translate not for rotate*/
+    /* Position of Circle */
+    bottom:0;
+    left: 0;
+    animation-name:shakeEffect;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes shakeEffect {
+    0%{
+        left: 0;
+        bottom: 0;
+    }
+    50%{
+        left: 5%;
+        bottom: 10%;   
+     }
+    100%{
+        left: 0;
+        bottom: 0;   
+     }    
+}
+
+/* Icon ZigZag Configuration */
+.icon-zigzag{
+    /* zigzag will come up */
+    z-index: 9;
+    /* IMP Perspective is needed only in scale and translate not for rotate*/
+    /* Position of Zigzag */
+    top:1.5em;
+    left: 0.3em;
+    animation:zigzagAnimation 5s ease-in infinite;
+    
+}
+@keyframes zigzagAnimation {
+    /* 0%{
+        left: 0;
+        top: 0;
+    } */
+    50%{
+        left: 5%;
+        top: 2%;   
+     }
+    /* 100%{
+        left: 0;
+        top: 0;   
+     } */     
+}
+
+
+/*Icon Plus Configuration */
+.icon-plus{
+    /* Plus will come up */
+    z-index: 9;
+    /* IMP Perspective is needed only in scale and translate not for rotate*/
+    /* Position of Zigzag */
+    top:-0.8rem;
+    left: 50%;
+    animation:shakeEffectPlus 5s ease-in infinite;
+    
+}
+@keyframes shakeEffectPlus {
+    /* 0%{
+        left: 0;
+        top: 0;
+    } */
+    50%{
+        left: 48%;
+        top: 3%;   
+     }
+    /* 100%{
+        left: 0;
+        top: 0;   
+     } */     
+}
+
+
+/* Hero Section Completed */
+
+/* 3 Project Section Styling configuration */
+
+/* Project-section will have the background color */
+
+.project-section{
+    /* Deigner Inpput */
+    background-color: rgb(231,231,231);
+    /* Margin applied on top side only */
+    margin-top: 4rem;
+}
+
+/* Project Heading Styling */
+.page-header{
+    /* Deigner Inpput */
+    color: var(--bgOrange);
+    font-size: 90px;
+    text-align: center;
+    padding: 30px;
+
+}
+
+/* Project Container Styling */
+
+.project-container{
+    /* Designer Input */    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    /* Display flex for one by one image */
+    display: flex;
+    flex-direction: column;
+    /* Gap betwwen different cards */
+    gap: 120px;
+}
+
+/* Styling to css property */
+
+.project-card{
+    /* Designer Input */
+    width: 90%;
+    height: 550px;
+    /* Image of project 1 */
+    /* image will be repeated four times as all four have same class name project-card */
+    background-image: url(./images/projects/Project1.png);
+    /* will cover the background size */
+    background-size: cover;
+    /* no repeat for background image */
+    background-repeat: no-repeat;
+    /* (We have to uverlap something) thats why Set position relative as we wants its content to come up */
+    position: relative;
+    /* shadow */
+    box-shadow: 0px 0px 40px #1f1f1f ;
+}
+
+/* Before and after effect on the card */
+/* After is used for black tint effect */
+.project-card::after{
+    /* We dont want any content */
+    content: "";
+    /* For overlapping */
+    position: absolute;
+    /* we want after one pseudo selector must select the whole imeage  */
+    /* Set all size 0 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Background color opacity change */
+    /* Designer input */
+    background-color: #1f1f1f9a;
+    /* It will not affect anything for now but later it will come in use */
+    transform: scaleX(1);
+    /* Z index 0 */
+    z-index: 0;
+}
+/* Before is used for sliding window effect */
+.project-card::before{
+    content: "";
+    /* Filter must come and overlap on the image so positio:absolute*/
+    position: absolute;
+    /* Filter must occupy the whole image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* Designer Inputs */
+    background: linear-gradient(45deg, #343d68,#343d68be, #343d687c);
+    /* Transform in X direction */
+    transform: scaleX(0);
+    /* Transform starting position */
+    transform-origin: left;
+    /* Duration */
+    transition: all 0.4s;
+    /* Z index 1 */
+    z-index: 1;
+}
+
+/* Effect will on hover */
+.project-card:hover::before{
+    /* Transform in X direction */
+    transform: scaleX(1);
+}
+
+
+/* Number property */
+.project-number{
+    /* For Over lapping */
+    position: absolute;
+    /* For image to be in top give any value*/
+    z-index: 5;
+
+    /* Designer inputs */
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    /* Normally number will not be visible Set display none or opacity 0,1*/
+    /* opacity: 0; */
+    display: none;
+}
+
+/* Number will be visible on hover */
+.project-card:hover .project-number{
+    /* opacity:1; */
+    display: block;
+}
+
+/* Number one and three are at same(Right) possition so make a class for it */
+/* Copy this class to project number */
+.project-number-right{
+    right: -45px;
+    top: -45px;
+}
+
+/* Number two and four are at same(left)possition so make a class for it */
+/* Copy this class to project number */
+.project-number-left{
+    left: -40px;
+    top: -45px;
+}
+
+/* Now all four contents on single image so use flex and direction column */
+/* project content */
+.project-content{
+    /* Content are overlapping */
+    position: absolute;
+    /* Display flex for positioning one by one */
+    display: flex;
+    /* Flex Direction Column*/
+    flex-direction: column;
+    /* Color of text white */
+    /* Designer Inputs */
+    columns: white;
+    margin: ;
+    padding: 2em;
+    /* Bottom 20% percent is responsible for all 4 on single image */
+    bottom: 20%;
+    /* Content on top */
+    z-index: 5;
+    gap: 1em;
+    transition: all 0.4s;
+}
+
+/* Project content are also on left and right */
+/* Left */
+.project-content-left{
+    left: 10%;
+}
+ 
+/* Right */
+.project-content-right{
+    right: 10%;
+}
+ 
+/* Projects skill container */
+.project-skill-container{
+    /* Designer Input */
+    width: 60%;
+    /* In single line */
+    display: flex;
+    /* Gap */
+    gap: 10px;
+    /* if not within come in next line  */
+    flex-wrap: wrap;
+}
+/* No change */
+/* So  */
+/* Set project skill width */
+.project-skill{
+    width: 40px; ;
+}
+
+/* Project heading styling */
+.project-heading{
+    /* Designer inputs */
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+    color: white;
+}
+
+/* Project Subheading styling */
+.project-subheading{
+    /* Designer inputs */
+    /* width: 100%; */
+    font-size: 16px;
+    font-style: italic;
+    color: white;
+}
+
+/* Btn group styling */
+.btn-grp{
+    /* Designer Inputs */
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+
+/* We want no border on btn-pink */
+.btn-project:hover{
+    border:none;
+}
+
+/* Button Icone Styling */
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    transition:all 0.4s;
+}
+/* Icon hover changes  */
+.icon:hover{
+    color: var(--bgOrange);    
+}
+
+/* Contents must scale on hover on the card*/
+.project-card:hover .project-content{
+    transform: scale(1.1);
+}
+
+
+/* Different images chage on the card */
+#project1{
+    background-image: url(./images/projects/Project1.png);
+}
+#project2{
+    /* 10% of 1200px  */
+    margin-left: 120px;
+    background-image: url(./images/projects/Project2.png);
+}
+#project3{
+    background-image: url(./images/projects/Project3.png);
+}
+#project4{
+    /* 10% of 1200px  */
+    margin-left: 120px;
+    background-image: url(./images/projects/Project4.png);
+}
+
+/* Adding Media Queries For Homework Add later */
+/* Added in the Original Portfolio Project */
+
+/* Project Section Completed */
+
+
+
+
+
+
+/* 4 Positioning skill container */
+.skills-container{
+    /* Further we have to overlap on it */
+    position: relative;
+    display: flex;
+    /* Designer input */
+    padding: 5rem;
+    margin: 10rem auto;
+    gap: 30px;
+}
+/* Skill Container Left */
+.skill-container-left{
+    /* Designer input */
+    width: 50%;
+    /* Flex for making one by one column */
+    display: flex;
+    flex-direction: column;
+}
+/* Skill Container Right */
+.skill-container-right{
+    /* Designer input */
+    width: 50%;
+    /* Flex for making one by one column */
+    display: flex;
+    /* Flex wrap so that it comes in next line */
+    flex-wrap: wrap;
+    /* Further we have to overlap on it */
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Position of Skill faded Text */
+.skill-faded-text{
+    /* Designer input */
+    font-size: 15em;
+    font-style: bold;
+    color: rgb(231,231,231);
+    bottom: -34.5%;
+    right: -5%;
+    /* Non Selectable */
+    user-select: none;
+    /* For overlapping */
+    position: absolute;
+    /* Overflow in y direction hidden */
+    overflow-y:hidden;
+}
+
+/* Blob Style*/
+.blob-style{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -5;
+    /* Movement Area */
+    transform: translate(-50%,-50%);
+    animation: blobAnimate 3s linear infinite;
+    /* justify-content: center; */
+}
+/* Add Keyframes */
+@keyframes blobAnimate{
+    50%{
+        top:54%;
+        left:56%;
+    }
+}
+
+/* Icons styling */
+.skills-logo{
+    /* Designer Inputs */
+    width: 90px;
+    transition: all 0.5s;
+}
+
+/* Scaling of logos on hover */
+.skills-logo:hover{
+    transform: scale(1.3);
+}
+
+
+/* Working on Heading and text */
+/* Left Side */
+.skill-heading{
+    /* Designer Input*/
+    font-size: 50px;
+    font-style: bold;
+    color: var(--bgOrange);
+    line-height: 50px;
+}
+/* Styling on M */
+.caps{
+    font-size: 90px;
+}
+
+/* Styling Sub heading */
+.Skill-subheading{
+    /* Designer Inputs */
+    margin-top: 1rem;
+    width: 85%;
+    /* Will take the complete area  */
+    /* Justify left,right,default, */
+    text-align: justify;
+}
+/* Gap between Paragraph */
+.Skill-subheading p{
+    /* Designer Inputs */
+    margin: 15px 0;
+}
+
+/* Skills Styling Completed */
+.contactus-form-container{
+    width: 100%;
+    background-color: rgb(231,231,231);
+}
+
+
+/* 5 Contact us styling */
+
+.contactus-heading{
+    /* Designer Inputs */
+    font-size: 5em;
+    color: var(--bgOrange);
+    padding-top: 2rem;
+}
+
+/* Contact us Subheading */
+.contactus-sub-heading{
+    /* Designer Inputs */
+    font-size: 3em;
+    color: #343d68aa;
+    /* Capital all words first letter */
+    text-transform: capitalize;
+}
+
+
+/* Contact form Container Styling */
+.contactus-form-container{
+    margin-top: 25px;
+    display: flex;
+     align-items: center;
+    justify-content: center;
+}
+
+/* Form Styling */
+.form{
+    display: flex;
+    flex-direction: column;
+    /* Designer Input */
+    gap: 30px;
+    width: 70%;
+    margin: 2rem 5rem;
+}
+
+/* TextFields Styling */
+.formfield-container{
+    /* Designer Input */
+    width: 100%;       
+}
+
+/* FormField Styling */
+.formfield{
+    /* Designer Input */
+    width: 100%;
+    height: 42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #1f1f1f;
+    border: none;
+    margin-top: 26px;
+} 
+
+/* Text Field Styliny*/
+.formfield-textarea{
+    /* Designer Input */
+    height: auto;
+    padding-top:1rem ;
+}
+
+/* Button Styling */
+#submit-btn{
+    border: none;
+    /* Designer Inputs */
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+/* Submit Button Hover */
+#submit-btn:hover{
+    /* Designer Inputs */
+    scale: 0.9;
+}
+
+/* Submit Icon */
+.submit-icon{
+    /* Designer Inputs */
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+
+
+
+
+/* Contact us SWection us Completed */
+
+
+/* 6 Footer section */
+footer{
+    /* We have to over lap further */
+    position: relative;
+    /* Designer inputs */
+    margin-top: -1px;
+    background-color: #343d68;
+    padding:5rem;
+}
+
+/* Footer Wrapper */
+.footer-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    /* Both at extreme ends */
+    justify-content: space-between;
+    /* at Center */
+    align-items: center;
+}
+
+
+/* Faded text positioning */
+.footer-faded-text{
+    position: absolute;
+    /* Designer Inputs */
+    left: 0;
+    bottom: 0;
+    color: #535c87;
+    user-select: none;
+    font-size: 5em;
+}
+
+/* Link Wrapper Styling */
+.link-wrapper{
+    display: flex;
+    /* Designer Inputs */
+    gap: 1.2rem;
+}
+
+.link-wrapper div a{
+    /* Designer Inputs */
+    color: white;
+    text-decoration: none;
+    transition: all 0.6s;
+}
+
+.link-wrapper div a:hover{
+    color: var(--bgOrange);
+}
+
+/* Icons Styling */
+.icon-wrapper{
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+
+
+
+
+
+
+

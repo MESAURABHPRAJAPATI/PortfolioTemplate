@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- Best Practice write code in wrapper class/id    -->
+    <div id="wrapper">
+        <!-- Inside Container -->
+        <!-- 1. Navigation section -->
+        <div class="container">
+            <!-- Navigation -->
+            <div class="navbar">
+                <!-- Logo Container -->
+                <div class="logo-container">
+                    <!--(Logo Image) J Image -->
+                    <img src="./images/userAsset/NavLogo.jpg" class="logo" alt="">
+                    <!-- (Logo text) -->
+                    <div class="logo-text">ohn Doe</div>
+                </div>
+                <!-- Nav items -->
+                    <div class="nav-items">
+                        <!-- 3 anchor tags which will redierct us to thes sections -->
+                        <div><a href="#projects">Projects</a></div>
+                        <div><a href="#skills">Skills</a></div>
+                        <div><a href="#contactme">Contact Me</a></div>
+
+                    </div>  
+             </div>
+        </div>
+
+        <!--2  Hero Section -->
+        <div class="hero-section">
+            <!-- #faded text -->
+            <div class="faded-text">John Doe</div>
+            <!--(A) Hero Section left side 4 things -->
+            <div class="hero-section-left">
+                <!--(a) Heading -->
+                <div class="hero-section-heading">Hi!! John Doe</div>
+                <!-- (b)Running text -->
+                <!-- two class because they both have same property -->
+                <div class="hero-section-heading hero-section-sub-heading">
+                    I am a 
+                    <!-- span Javascript ignore for now -->
+                    <span class="role"></span>
+                </div>
+                <!-- (c) Description -->
+                <div class="hero-section-description">
+                    I'm a software developer and here is my portfolio website.
+                    here you'll learn about my journey as a software developer.
+                </div>
+                <div class="btn-pink" id="btn">Hire Me!</div>
+            </div>
+            <!--(B) Hero Section Right side (Images)  -->
+            <div class="hero-section-right">
+                <!-- Adding Images -->
+                <div class="absolute icons icon-dots">
+                    <img src="./images/userAsset/dots.png" alt="">
+                </div>
+                <div class="absolute icons icon-cube">
+                    <img src="./images/userAsset/cube.png" alt="">
+                </div>
+                <div class="absolute icons icon-circle">
+                    <img src="./images/userAsset/circle.png" alt="">
+                </div>
+                <div class="absolute icons icon-zigzag">
+                    <img src="./images/userAsset/zigzags.png" alt="">
+                </div>
+                <div class="absolute icons icon-plus">
+                    <img src="./images/userAsset/plus.png" alt="">
+                </div>
+                <div class="user-image">
+                    <img src="./images/userAsset/UserImage.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 3 Project Section -->
+        <!-- id will redirect to particular section -->
+        <div class="project-section" id="projects">
+            <!-- Project Heading -->
+            <h2 class="page-header">Projects</h2>
+            <!-- /Fill everything in container -->
+            <div class="project-container">
+                <!-- Creting 1st class project-card -->
+                <div class="project-card" id="project1">
+                    <!-- numberimg class -->
+                    <div class="project-number project-number-right">01</div>
+                    <!-- Content class -->
+                    <div class="project-content project-content-left">
+                        <!-- All Skills images class -->
+                        <div class="project-skills-container">
+                            <img class="project-skill" src="./images/stack/HTML.png" alt="">
+                            <img class="project-skill" src="./images/stack/CSS.png" alt="">
+                            <img class="project-skill" src="./images/stack/Javascript.svg" alt="">
+                            <img class="project-skill" src="./images/stack/Express.png" alt="">
+                            <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="">
+                            <img class="project-skill" src="./images/stack/Tailwind.png" alt="">
+                            <img class="project-skill" src="./images/stack/NodeJs.svg" alt="">
+                            <img class="project-skill" src="./images/stack/MongoDB.svg" alt="">
+                            <img class="project-skill" src="./images/stack/Redux.svg" alt="">
+                            <img class="project-skill" src="./images/stack/Vercel.svg" alt="">
+                        </div>
+                        <!-- Heading 2 -->
+                        <h2 class="project-heading">Tint&Orange</h2>
+                        <!-- Subheading -->
+                        <div class="project-subheading">Its is a car modification company
+                            which provide you sheets to protect your car from scratch
+                        </div>
+                        <!-- Button Group -->
+                        <div class="btn-grp">
+                            <!-- Earlier used btn-pink -->
+                            <button class="btn-pink btn-project">Read More</button>
+                            <!-- Github Icon -->
+                            <a href="">                                
+                                <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                            </a>
+                            <!-- Live Link Icon -->
+                            <a href="">
+                                <i title="Live Link" class="fa-solid fa-link icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Creting 2nd class project-card -->
+                <div class="project-card" id="project2">
+                    <!-- numberimg class -->
+                    <div class="project-number project-number-left">02</div>
+                    <!-- Content class -->
+                    <div class="project-content project-content-right">
+                        <!-- All Skills images class -->
+                        <div class="project-skills-container">
+                            <img class="project-skill" src="./images/stack/HTML.png" alt="">
+                            <img class="project-skill" src="./images/stack/CSS.png" alt="">
+                            <img class="project-skill" src="./images/stack/Javascript.svg" alt="">
+                            <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="">
+                            <img class="project-skill" src="./images/stack/Tailwind.png" alt="">
+                            <img class="project-skill" src="./images/stack/MongoDB.svg" alt="">
+                            <img class="project-skill" src="./images/stack/Vercel.svg" alt="">
+                        </div>
+                        <!-- Heading 2 -->
+                        <h2 class="project-heading">Booking Copyrights</h2>
+                        <!-- Subheading -->
+                        <div class="project-subheading">A Platform to download copyright free Youtube Music. 
+                        </div>
+                        <!-- Button Group -->
+                        <div class="btn-grp">
+                            <!-- Earlier used btn-pink -->
+                            <button class="btn-pink btn-project">Read More</button>
+                            <!-- Github Icon -->
+                            <a href="">                                
+                                <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                            </a>
+                            <!-- Live Link Icon -->
+                            <a href="">
+                                <i title="Live Link" class="fa-solid fa-link icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Creting 3rd class project-card -->
+                <div class="project-card" id="project3">
+                    <!-- numberimg class -->
+                    <div class="project-number project-number-right">03</div>
+                    <!-- Content class -->
+                    <div class="project-content project-content-left">
+                        <!-- All Skills images class -->
+                        <div class="project-skills-container">
+                            <img class="project-skill" src="./images/stack/HTML.png" alt="">
+                            <img class="project-skill" src="./images/stack/CSS.png" alt="">
+                            <img class="project-skill" src="./images/stack/Javascript.svg" alt="">
+                            <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="">
+                            <img class="project-skill" src="./images/stack/Tailwind.png" alt="">
+                            <img class="project-skill" src="./images/stack/Vercel.svg" alt="">
+                        </div>
+                        <!-- Heading 2 -->
+                        <h2 class="project-heading">Isha Tattva</h2>
+                        <!-- Subheading -->
+                        <div class="project-subheading">A Website for interior designer to showcase her works and samples.
+                        </div>
+                        <!-- Button Group -->
+                        <div class="btn-grp">
+                            <!-- Earlier used btn-pink -->
+                            <button class="btn-pink btn-project">Read More</button>
+                            <!-- Github Icon -->
+                            <a href="">                                
+                                <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                            </a>
+                            <!-- Live Link Icon -->
+                            <a href="">
+                                <i title="Live Link" class="fa-solid fa-link icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Creting 4th class project-card -->
+                <div class="project-card" id="project4">
+                    <!-- numberimg class -->
+                    <div class="project-number project-number-left">04</div>
+                    <!-- Content class -->
+                    <div class="project-content project-content-right">
+                        <!-- All Skills images class -->
+                        <div class="project-skills-container">
+                            <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="">
+                            <img class="project-skill" src="./images/stack/Tailwind.png" alt="">
+                            <img class="project-skill" src="./images/stack/Vercel.svg" alt="">
+                        </div>
+                        <!-- Heading 2 -->
+                        <h2 class="project-heading">Granit</h2>
+                        <!-- Subheading -->
+                        <div class="project-subheading">A archtectural website to plan your building and home(Hebraw Language)
+                        </div>
+                        <!-- Button Group -->
+                        <div class="btn-grp">
+                            <!-- Earlier used btn-pink -->
+                            <button class="btn-pink btn-project">Read More</button>
+                            <!-- Github Icon -->
+                            <a href="">                                
+                                <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                            </a>
+                            <!-- Live Link Icon -->
+                            <a href="">
+                                <i title="Live Link" class="fa-solid fa-link icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 4 Skill Section -->
+        <div id="Skills" class="container skills-container">
+            <!-- Faded Text -->
+            <div class="skill-faded-text">Skills</div>
+            <!-- Skills Left Part -->
+            <div class="skill-container-left">
+                <!-- Heading -->
+                <h2 class="skill-heading">
+                    <!-- Span Tag for M as we going to change the Design of M -->
+                    <span class="caps">M</span>e And
+                    <br/>
+                    MyTech Stack
+                </h2>
+                <!-- All the texts -->
+                <div class=" ">
+                    <p>
+                        Hi Everyone My Name is john Doe I am a Full Stack Developer I
+                        have been working for last 3 years and currently I am working with a 
+                        Budding Startup in USA and a full time free lancer. currently i am 
+                        working on NextJs and Making Beautiful UI-UX are my few features
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit suscipit obcaecati, eum perferendis praesentium, impedit molestias ipsa at saepe fugit neque eveniet nemo vero quod culpa eos accusantium earum dolore.</p>   
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit suscipit obcaecati, eum perferendis praesentium, impedit molestias ipsa at saepe fugit neque eveniet nemo vero quod culpa eos accusantium earum dolore.</p>
+                </div>                
+            </div>
+            <!-- Skills Right Part -->
+            <!-- id will redirect to particular section -->
+            <div class="skill-container-right" id="skills">
+                <!-- Icon -->
+                <img src="./images/userAsset/blob vector.png" class="blob-style" alt="">
+                <!--All Images  -->
+                <img src="./images/stack/HTML.png" class="skills-logo" alt="">
+                <img src="./images/stack/CSS.png" class="skills-logo" alt="">
+                <img src="./images/stack/Javascript.svg" class="skills-logo" alt="">
+                <img src="./images/stack/React.png" class="skills-logo" alt="">
+                <img src="./images/stack/NodeJs.svg" class="skills-logo" alt="">
+                <img src="./images/stack/Next.svg" class="skills-logo" alt="">
+                <img src="./images/stack/Redux.svg" class="skills-logo" alt="">
+                <img src="./images/stack/Tailwind.png" class="skills-logo" alt="">
+                <img src="./images/stack/Bootstrap.svg" class="skills-logo" alt="">
+                <img src="./images/stack/MaterialUI.svg" class="skills-logo" alt="">
+                <img src="./images/stack/Express.png" class="skills-logo" alt="">
+                <img src="./images/stack/Git.svg" class="skills-logo" alt="">
+                <img src="./images/stack/Github.svg" class="skills-logo" alt="">
+                <img src="./images/stack/Graphql.svg" class="skills-logo" alt="">
+                <img src="./images/stack/MongoDB.svg" class="skills-logo" alt="">
+                <img src="./images/stack/Vercel.svg" class="skills-logo" alt="">
+                <img src="./images/stack/ChartJs.svg" class="skills-logo" alt="">
+                <img src="./images/stack/Bash.svg" class="skills-logo" alt="">
+                <img src="./images/stack/Docker.svg" class="skills-logo" alt="">
+                <img src="./images/stack/K8s.svg" class="skills-logo" alt="">       
+
+            </div>
+        </div>
+        <!-- 5 Contavt Us Section -->
+        <!-- id will redirect to particular section -->
+        <div class="contactus-form-container" id="contactme">
+            <!-- Container -->
+            <div class="container">
+                <!-- Heading -->
+                <h1 class="contactus-heading">Contact Me                    
+                </h1>
+
+                <!-- Subheading -->
+                <h3 class="contactus-sub-heading">Question,Thoughts or Just Want To Say Hello!!                    
+                </h3>
+
+                <!-- Contact us form container -->
+                <div class="contactus-form-container">
+                    <form class="form" action="">
+                        <!-- Various textfield,area inside this -->
+                        <div class="formfield-container">
+                            <!-- For Name -->
+                            <input class="formfield"
+                            type="text"
+                            name="name"
+                            id=""
+                            placeholder="Enter Your Name">
+
+                            <!-- For Email -->
+                            <!-- For Name -->
+                            <input class="formfield"
+                            type="email"
+                            name="email"
+                            id=""
+                            placeholder="Enter Your Email Address">
+
+                            <!-- For Subject -->
+                            <input class="formfield"
+                            type="text"
+                            name="Subject"
+                            id=""
+                            placeholder="Enter Your Subject">
+
+                            <!-- For Text Area -->
+                            <textarea name="message" 
+                            id="" cols="30" rows="10"
+                            class="formfield formfield-textarea" 
+                            placeholder="Enter Your Message"></textarea>
+                        </div>
+                        <!-- Button (Send Message) -->
+                        <div>
+                            <button type="submit" class="btn-pink" id="submit-btn">
+                                Send Message 
+                                <!-- Icon Of Paper Plane -->
+                                <!-- Find out how this thing (icon) work -->
+                                <i class="submit-icon fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 6 Footer Section -->
+        <footer>
+            <div class="container">
+                <!-- Footer Wrapper -->
+                <div class="footer-wrapper">
+                    <!-- Faded Text -->
+                    <div class="footer-faded-text">John Doe</div>
+                
+                    <!-- Link Wrapper -->
+                    <div class="link-wrapper">
+                        <div>
+                            <a href="#projects">Projects</a>
+                        </div>
+                        <div>
+                            <a href="#skills">Skills</a>
+                        </div>
+                        <div>
+                            <a href="#contactme">ContactMe</a>
+                        </div>
+                    </div>
+                    <!-- Icon Wrapper -->
+                    <div class="icon-wrapper">
+                        <i class="fa-brands fa-linkedin icon"></i>
+                        <i class="fa-brands fa-github icon"></i>
+                        <i class="fa-brands fa-twitter icon"></i>
+                        <i class="fa-brands fa-instagram icon"></i>
+                        <i class="fa-regular fa-envelope icon"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- Script javascript tag ignore it from now -->
+    <!-- I Typed it fully not copy pasted -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script>
+        var typeData = new Typed(".role", {
+            strings:[
+                "Full Stack Developer",
+                "Web Developer",
+                "UI-UX Designer",
+                "Backend Developer",
+                "Coder",
+            ],
+            loop: true,
+            typeSpeed:100,
+            backSpeed:80,
+            backDelay:1000,
+            
+        });
+
+    </script>
+</body>
+</html>
